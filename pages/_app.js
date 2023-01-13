@@ -1,12 +1,12 @@
 import { ConnectKitProvider, getDefaultClient } from "connectkit";
 import Head from "next/head";
 import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { bsc } from "wagmi/chains";
+import { bscTestnet } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import Navbar from "../components/Navbar.js";
 import "../styles/globals.css";
 
-const { chains, provider } = configureChains([bsc], [publicProvider()]);
+const { chains, provider } = configureChains([bscTestnet], [publicProvider()]);
 
 const client = createClient(
   getDefaultClient({
